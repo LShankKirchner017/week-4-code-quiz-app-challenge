@@ -1,7 +1,15 @@
+:root {
+    --background: aliceblue; 
+}
+
 *{
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: mediumaquamarine;
+}
+
+ol, li {
+    background-color: var(--background);
 }
 
 .cardHeader {
@@ -20,6 +28,7 @@
    
 }
 .cardBody{
+    background-color: var(--background);
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -35,7 +44,7 @@
 
 #startBtn {
     display: inline-block;
-    background-color: aliceblue;
+    background-color: var(--background);
     color: black;
     padding: 15px;
     text-align: center;
