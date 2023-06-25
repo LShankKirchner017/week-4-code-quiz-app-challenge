@@ -6,6 +6,7 @@
 }
 
 
+
 body{
   background: mediumaquamarine;  
 }
@@ -58,7 +59,7 @@ body{
     padding: 0 30px;
     border-radius: 5px 5px 0 0;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .infoBox, .infoList{
@@ -71,7 +72,7 @@ body{
 }
 
 .infoBox .infoList .infoSpan{
-    font-weight: 600;
+    font-weight: 500;
     color:black;
 }
 
@@ -120,4 +121,131 @@ body{
     justify-content: space-between;
     box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
 }
+
+.quizBox .title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.quizBox header .timer{
+    color: aliceblue;
+    background: mediumaquamarine;
+    border: 1px solid lightgray;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+}
+
+.quizBox .time .timeLeftTxt {
+    font-weight: 300;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quizBox header .timer .timer-sec{
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: aliceblue;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: mediumaquamarine;
+    border: 1px solid lightgray;
+    user-select: none;
+}
+
+.quizBox header .timeLine{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: mediumaquamarine;
+}
+
+section{
+    padding: 25px 30px 20px 30px;
+    background:mediumaquamarine;
+}
+
+section .questionText{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+section .optionList {
+    padding: 20px 0px;
+    display: block;
+}
+
+section .optionList .option {
+    background: lightGray;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+seclection .optionList .option:last-child{
+    margin-bottom: 0px;
+}
+
+selection .optionList .option:hover{
+    color: aliceblue;
+    background: lightgray;
+    border: 1px solid darkgray;
+}
+
+section .optionList .option.correct{
+    color: mediumseagreen;
+    background: lightgray;
+    border: 1px solid darkgray;
+}
+
+section .optionList .option.incorrect{
+    color: mediumorchid;
+    background: lightgray;
+    border: 1px solid darkgray;
+}
+
+section .optionList .option.disabler{
+    pointer-event: none;
+}
+
+section .optionList .option .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 24px
+}
+
+.optionList .option .icon.tick{
+    color: mediumseagreen;
+    border-color: mediumseagreen;
+    background: lightgray;
+}
+
+.optionList .option .icon.cross{
+    color: mediumorchid;
+    border-color: mediumorchid;
+    background: lightgray;
+}
+
+
 
