@@ -1,50 +1,34 @@
-:root {
-    --background: aliceblue; 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-*{
-    text-align: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color: mediumaquamarine;
+body{
+  background: mediumaquamarine;  
 }
 
-ol, li {
-    background-color: var(--background);
+.startBtn, .infoBox, .quizBox, .resultBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.cardHeader {
-    display: in-line;
-    text-align: center;
-
+.infoBox.activeInfo, .quizBox.activeQuiz, .resultBox.activeResult {
+    opacity: 1;
+    z-index: 5;
+    pointer-events:auto;
+    transform: translate(-50%, -50%) scale(1); 
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2px 16px;
-   
-}
-.cardBody{
-    background-color: var(--background);
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.cardBody:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.startBtn, .nextBtn {
+.startBtn {
     display: inline-block;
-    background-color: var(--background);
+    background-color: aliceblue;
     color: black;
     padding: 15px;
     text-align: center;
@@ -55,3 +39,330 @@ ol, li {
     cursor: pointer;
 }
 
+.infoBox{
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.infoBox .infoTitle {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.infoBox, .infoList{
+    padding: 15px 30px;
+}
+
+.infoBox, .infoList, .info{
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.infoBox .infoList .infoSpan{
+    font-weight: 500;
+    color:black;
+}
+
+.infoBox .buttons{
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgray;
+}
+
+.infoBox .buttons button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border:  none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid mediumaquamarine;   
+    transition: all 0.3s ease;
+}
+
+.quizBox {
+    width: 550px;
+    background: aliceblue;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.quizBox header {
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    background: aliceblue;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
+}
+
+.quizBox .title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.quizBox header .timer{
+    color: aliceblue;
+    background: mediumaquamarine;
+    border: 1px solid lightgray;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+}
+
+.quizBox .time .timeLeftTxt {
+    font-weight: 300;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quizBox header .timer .timer-sec{
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: aliceblue;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: mediumaquamarine;
+    border: 1px solid lightgray;
+    user-select: none;
+}
+
+.quizBox header .timeLine{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: mediumaquamarine;
+}
+
+section{
+    padding: 25px 30px 20px 30px;
+    background:mediumaquamarine;
+}
+
+section .questionText{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+section .optionList {
+    padding: 20px 0px;
+    display: block;
+}
+
+section .optionList .option {
+    background: lightGray;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+seclection .optionList .option:last-child{
+    margin-bottom: 0px;
+}
+
+selection .optionList .option:hover{
+    color: aliceblue;
+    background: lightgray;
+    border: 1px solid darkgray;
+}
+
+section .optionList .option.correct{
+    color: mediumseagreen;
+    background: lightgray;
+    border: 1px solid darkgray;
+}
+
+section .optionList .option.incorrect{
+    color: mediumorchid;
+    background: lightgray;
+    border: 1px solid darkgray;
+}
+
+section .optionList .option.disabler{
+    pointer-events: none;
+}
+
+section .optionList .option .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 24px
+}
+
+.optionList .option .icon.tick{
+    color: mediumseagreen;
+    border-color: mediumseagreen;
+    background: lightgray;
+}
+
+.optionList .option .icon.cross{
+    color: mediumorchid;
+    border-color: mediumorchid;
+    background: lightgray;
+}
+
+footer {
+    height: 50px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightslategray;
+}
+
+footer .totalQuestions span {
+    display: flex;
+    user-select: none;
+}
+
+footer .totalQuestions span p{
+    font-weight: 300px;
+    padding: 0 5px;
+}
+
+footer .totalQuestions span p:first-child{
+    padding-left: 0px;
+}
+
+footer button {
+    height: 40px; 
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer; 
+    border: none;
+    outline: none; 
+    color: aliceblue; 
+    border-radius: 5px;
+    background: mediumaquamarine;
+    border: 1px solid mediumaquamarine;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+footer button:hover{
+    background: mediumaquamarine;
+}
+
+footer button.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.resultBox{
+    background: mediumaquamarine;
+    border-radius: 5px;
+    display: flex;
+    padding: 25px 30px;
+    width: 450px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.resultBox .compeleteTxt{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.resultBox .scoreTxt span{
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.resultBox .scoreText span p{
+    padding: 0 4px;
+    font-weight: 500; 
+}
+
+.resultBox .buttons{
+    display: flex;
+    margin: 20px 0;
+}
+
+.resultBox .buttons button{
+    margin: 0 10px;
+    height: 45px; 
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500; 
+    cursor: pointer;
+    border: none;
+    outline: none; 
+    border-radius: 5px; 
+    border: 1px solid darkgray;
+    transition: all 0.3s ease;
+}
+
+.buttons button.restart{
+    color: aliceblue;
+    background: mediumaquamarine;
+}
+
+.buttons button.restart:hover{
+    background: mediumaquamarine;
+}
+
+.buttons button.quit{
+    color: aliceblue;
+    background: mediumaquamarine;
+}
+
+.buttons button.quit:hover{
+    background: mediumaquamarine;
+}
