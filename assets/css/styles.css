@@ -42,7 +42,7 @@ ol, li {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-#startBtn {
+.startBtn, .nextBtn {
     display: inline-block;
     background-color: var(--background);
     color: black;
@@ -52,4 +52,6 @@ ol, li {
     border-radius: 50px 50px;
     height: 50px;
     font-size: medium;
+    cursor: pointer;
 }
+
