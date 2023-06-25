@@ -46,7 +46,7 @@ var questions = [
       "None of the above",
     ],
   },
-];
+]
 
 
 

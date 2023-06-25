@@ -121,7 +121,7 @@ body{
     box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
 }
 
-.quizBox .title{
+.quizBox header .title{
     font-size: 20px;
     font-weight: 500;
 }
@@ -139,7 +139,7 @@ body{
     width: 145px;
 }
 
-.quizBox .time .timeLeftTxt {
+.quizBox header .timer .timeLeftTxt {
     font-weight: 300;
     font-size: 17px;
     user-select: none;
@@ -172,7 +172,7 @@ section{
     background:mediumaquamarine;
 }
 
-section .questionText{
+section .questionTxt{
     font-size: 25px;
     font-weight: 500;
 }
