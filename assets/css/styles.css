@@ -196,11 +196,11 @@ section .option_list .option {
     justify-content: space-between;
 }
 
-seclection .option_list .option:last-child{
+section .option_list .option:last-child{
     margin-bottom: 0px;
 }
 
-selection .option_list .option:hover{
+section .option_list .option:hover{
     color: aliceblue;
     background: lightgray;
     border: 1px solid darkgray;
