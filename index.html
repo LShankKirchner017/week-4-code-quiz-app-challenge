@@ -7,17 +7,32 @@
     <link rel="stylesheet" href="./assets/css/styles2.css" />
 </head>
 <body>
-    <div class="header" class="containerHeader">
-        <h1>Coding Quiz</h1>
-    </div>
         <button class="startBtn">Start Quiz</button>
-    <header>
-        <div class="quizBox">
-            <div class="timeLeftTxt">Time Left</div>
-            <div class="timerSec">2:00</div>
+
+    <div class="infoBox">
+        <div class="infoTitle"><span>Rules for the Quiz</span></div>
+        <div class="infoList">
+            <div class="info">Try to answer these code related questions!</div>
+            <div class="info">You have two minutes total to complete the quiz.</div>
+            <div class="info">For each incorrect answer, you will lose 2 seconds.</div>
+            <div class="info">The quiz is over when you have answered all the questions correctly, or time runs out!</div> 
         </div>
-        <div class="timeLine"></div>
-    </header>
+        <div class="buttons">
+            <button class="quit">Exit</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+   
+    <div class="quizBox">
+        <header>
+            <div class="title">Coding Quiz</div>
+            <div class="timer"></div>
+                <div class="timeLeftTxt">Time Left</div>
+                <div class="timerSec">2:00</div>
+            </div>
+            <div class="timeLine"></div>
+        </header>
+    </div>
     <section>
         <div class="questionText">
             <!-- Insert JS Questions -->
@@ -32,18 +47,19 @@
         </div>
         <button class="nextBtn">Next Question</button>
     </footer>
+</div>
 
-    <div class="resultBox">
-        <div class=""completeTxt">You have completed the Quiz!</div>
-        <div class="scoreTxt">
-            <!-- Insert Secore from JS -->
-        </div>
-        <div class="buttons">
-        <div class="restart", class="quit">
-            <button>Restart</button>
-            <button>Quit</button>
-        </div>
+<div class="resultBox">
+    <div class="completeTxt">You have completed the quiz!</div>
+    <div class="scoreTxt">
+        <!-- Insert Score Results from JS -->
+    </div>  
+    <div class="button">
+        <button class="restart">Replay Quiz</button>
+        <button class="quit">Quit Quiz</button>
+        </div>     
     </div>
+
  <script src="./assets/scripts/script.js"></script>   
 </body>
 </html>
