@@ -1,32 +1,30 @@
 // selecting all required elements
-var startBtn = document.querySelector(".startBtn")
-var infoBox = document.querySelector(".infoBox") 
-var exitBtn = document.querySelector(".buttons .quit")
-var continueBtn = document.querySelector(".buttons .restart")
-var quizBox = document.querySelector(".quizbox")
-var resultBox = document.querySelector(".resultBox")
-var optionList = document.querySelector(".optionList")
-var timeLine = document.querySelector("head .timeLine")
-var timeText = document.querySelector(".timer .timeLeftTxt")
-var timeCount = document.querySelector(".timer .timerSec")
+var start_btn = document.querySelector(".start_btn")
+var info_box = document.querySelector(".info_box")
+var exit_btn = info_box.querySelector(".buttons .quit")
+var continue_btn = info_box.querySelector(".buttons .restart")
+var quiz_box = document.querySelector(".quiz_box")
+var result_box = document.querySelector(".result_box")
+var option_list = document.querySelector(".option_list")
+var time_line = document.querySelector("header .time_line")
+var timeText = document.querySelector(".timer .time_left_txt")
+var timeCount = document.querySelector(".timer .time_sec")
 
 // if startQuiz button is clicked
-startBtn.onclick = function(){
-    infoBox.classList.add("activeInfo"); //showa info box
+start_btn.onclick = function() {
+    info_box.classList.add("activeInfo");
 }
 
-// if exitQuiz button is clicked
-exitBtn.onclick = function(){
-    infoBox.classList.remove("activeInfo"); //hidea info box
+//if existQuiz button is clicked
+exit_btn.onclick = function (){
+    info_box.classList.remove("activeInfo")
 }
 
-// if continueQuiz button is clicked
-continueBtn.onclick = function(){
-    infoBox.classList.remove("activeInfo"); // hides info box
-    quizBox.classList.add("activeQuiz"); //shows quiz box
-    showQuestions(0); // calling showQuestions function
-    questionsCounter(1); //passing 1 parameter to Question Counter
-    startTimer(120); //calling startTimer function
-    starTimerLine(0); // calling starTimerLine function
+continue_btn.onclick = function () {
+    info_box.classList.remove("activeInfo")
+    quiz_box.classList.add("activeQuiz")
+    showQuetions(0);
+    queCounter(1);
+    starTimer(120)
+    starTimerLine(0)
 }
-

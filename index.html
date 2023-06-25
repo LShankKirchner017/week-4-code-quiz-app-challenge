@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 <body>
-        <button class="startBtn">Start Quiz</button>
-
-    <div class="infoBox">
-        <div class="infoTitle"><span>Rules for the Quiz</span></div>
-        <div class="infoList">
+    <button class="start_btn">Start Quiz</button>
+<!-- Info Box -->
+    <div class="info_box">
+        <div class="info_title"><span>Rules for the Quiz</span></div>
+        <div class="info_list">
             <div class="info">Try to answer these code related questions!</div>
             <div class="info">You have two minutes total to complete the quiz.</div>
             <div class="info">For each incorrect answer, you will lose 2 seconds.</div>
@@ -23,34 +23,36 @@
         </div>
     </div>
    
-    <div class="quizBox">
+    <!-- Quiz Box -->
+    <div class="quiz_box">
         <header>
-            <div class="title">Coding Quiz</div>
-            <div class="timer"></div>
-                <div class="timeLeftTxt">Time Left</div>
-                <div class="timerSec">2:00</div>
+            <div class="title">Coding Questions Quiz</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">120</div>
             </div>
-            <div class="timeLine"></div>
+            <div class="time_line"></div>
         </header>
-    <section>
-        <div class="questionTxt">
-            <!-- Insert JS Questions -->
-        </div>
-        <div class="optionList">
-            <!-- Insert JS Options -->
-        </div>
-    </section>
-    <footer>
-            <div class="totalQuestions">
-            <!-- Insert JS Count Number -->
-        </div>
-        <button class="nextBtn">Next Question</button>
-    </footer>
-</div>
+        <section>
+           <div class="que_txt">
+                <!-- Here I have inserted questions from JS -->
+           </div> 
+           <div class="option_list">
+            <!-- Here i have inserted options from JS -->
+           </div>
+        </section>
+        <!-- footer of quiz box -->
+        <footer>
+            <div class="total_ que">
+                <!-- Here i have inserted question count number form JS -->
+            </div>
+            <button class="next_btn">Next Questions</button>
+        </footer>
+    </div>
 
-<div class="resultBox">
-    <div class="completeTxt">You have completed the quiz!</div>
-    <div class="scoreTxt">
+<div class="result_box">
+    <div class="complete_txt">You have completed the quiz!</div>
+    <div class="score_txt">
         <!-- Insert Score Results from JS -->
     </div>  
     <div class="button">
@@ -58,6 +60,6 @@
         <button class="quit">Quit Quiz</button>
         </div>     
     </div>
-<script src="./assets/scripts/script.js"></script>  
+<script src="./assets/scripts/script.js"></script>
 </body>
 </html>
