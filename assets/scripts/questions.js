@@ -1,6 +1,8 @@
+// creating an array and passing the number, questions, options, and answers
+
 var questions = [
   {
-    num: 1,
+    numb: 1,
     question: "What does HTML stand for?",
     answer: "Hyper Text Markup Language",
     options: [
@@ -12,7 +14,7 @@ var questions = [
   },
 
   {
-    num: 2,
+    numb: 2,
     question: "What does CSS stand for?",
     answer: "Cascading Style Sheets",
     options: [
@@ -24,7 +26,7 @@ var questions = [
   },
 
   {
-    num: 3,
+    numb: 3,
     question: "What does DOM stand for?",
     answer: "Document Object Model",
     options: [
@@ -36,7 +38,7 @@ var questions = [
   },
 
   {
-    num: 4,
+    numb: 4,
     question: "What are the three primative types in JaveScript?",
     answer: "String, number, boolean, undefined",
     options: [
